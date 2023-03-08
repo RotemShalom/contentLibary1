@@ -71,16 +71,35 @@
     text-align: right;
     color: #064F8D;
     background-color: #FFD5B8;
-    border-radius: 25px;
+    border-radius: 25px 25px 0px 0px;
     border-color: transparent;
     font-family: var(--font-family-ui) !important;
+    box-shadow: none;
 }
 
-.blocks-accordion__header{
-    color: #064F8D;
+.blocks-accordion__content--visible {
+    background-color: #ffd5B8;
+    border-radius: 0px 0px 25px 25px;
+    border-color: transparent;
+}
+
+.blocks-accordion__wrapper--legacy {
+    border-color: transparent;
 }
 
 
+.blocks-accordion__item--legacy, .blocks-accordion__item--legacy:first-child{
+    border-top: none;
+    border-radius: 25px 25px 0px 0px;
+}
+
+/* .blocks-accordion__content{
+    border-left: 4px solid #064F8D !important;
+} */
+
+.blocks-accordion__wrapper{
+    box-shadow: none;
+}
 /*-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
 /*שינוי פונטים */
@@ -119,3 +138,4 @@ li, .block-list.block-list--bulleted.block-list--legacy,
     align-content: right;
     
 }
+
