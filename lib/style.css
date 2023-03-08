@@ -1,13 +1,47 @@
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*עיצוב עמוד בית */
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
 /*הגדרת לוגו*/
-.classic .cover__details-logo, p, li, h1, h2, h3, h4, h5, h6, .block-list , .blocks-accordion__header{
-    direction: rtl;
+.classic .cover__details-logo, p, li, h1, h2, h3, h4, h5, h6, .block-list , .blocks-accordion__header, span,
+.flashcard-side__description{
+    direction: rtl !important;
 }
 
 
 /*שינוי גודל כותרות בתוכן עניינים*/
-.overview-list__section-titleת .overview-list-item__title{
+.overview-list__section-title .overview-list-item__title{
     font-size: 2rem;
 }
+
+/*עיצוב כותרות הסקשיינים*/
+.overview-list__section-title {
+    border-bottom: 0.1rem solid #F76F14;
+    color: black;
+    font-size: 1.5rem;
+}
+
+/*עיצוב שמות הנושאים*/
+.overview-list-item__title{
+    color: #064F8D;
+    font-family: OSLuizRound;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*עיצוב כללי עמודי תוכן*/
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
+
+/*עיצוב האייקונים בעמוד הראשי*/
+.overview-list-item__icon{
+    color: #5DC4F1;
+}
+
 
 /*העלמת קו הטקסט בתמונות*/
 .block-image--overlay .block-image__paragraph:before, .classic .lesson-header-wrap--mobile .lesson-header__top-wrap:after, .lesson-header__top-wrap:after{
@@ -22,6 +56,10 @@
 /*הסתרת ה-HEADER של עמודי התוכן*/
 .page__header-limit, .page__header{
     display: none;
+}
+
+.classic .lesson-nav--full .lesson-nav__link-text{
+    font-size: 2rem;
 }
 
 
@@ -59,6 +97,10 @@
     direction: rtl;
 }
 
+.flashcard-side__content, .flashcard-side__content :not(img):not(.flashcard-side-flip__tooltip){
+    direction: rtl;
+    text-align: right;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
@@ -71,33 +113,33 @@
     text-align: right;
     color: #064F8D;
     background-color: #FFD5B8;
-    border-radius: 25px 25px 0px 0px;
     border-color: transparent;
     font-family: var(--font-family-ui) !important;
     box-shadow: none;
+    /* border-radius: 25px 25px 0px 0px; */
+}
+
+.blocks-accordion__wrapper:first-child .blocks-accordion__header{
+    border-radius: 25px 25px 25px 25px !important; 
 }
 
 .blocks-accordion__content--visible {
     background-color: #ffd5B8;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 25px 25px 25px 25px;
     border-color: transparent;
 }
 
-.blocks-accordion__wrapper--legacy {
+.blocks-accordion__wrapper--legacy:first-child {
     border-color: transparent;
 }
 
 
-.blocks-accordion__item--legacy, .blocks-accordion__item--legacy:first-child{
+.blocks-accordion__item--legacy:first-child{
     border-top: none;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px 25px 25px 25px !important;
 }
 
-/* .blocks-accordion__content{
-    border-left: 4px solid #064F8D !important;
-} */
-
-.blocks-accordion__wrapper{
+.blocks-accordion__wrapper:first-child{
     box-shadow: none;
 }
 /*-----------------------------------------------------------------------------------*/
@@ -116,26 +158,42 @@
     font-family: var(--font-family-body) !important;
 }
 
-.block-list__row, .block-list__col, ul.block-list__list{
-    direction: rtl !important;
-    text-align: right !important;
-    align-items: right;
-    align-content: right;
-}
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*עיצוב הרשימות*/
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
 
 /*עיצוב בולט הרשימות*/
 circle{
     color: #064F8D;
 }
 
-li.block-list__item,
-.block-list__content.brand--body,
-li, .block-list.block-list--bulleted.block-list--legacy,
-.block-list__container {
-    direction: rtl !important;
-    text-align: right !important;
-    align-items: right;
-    align-content: right;
-    
+.block-list__content__left {
+    right: 0;
 }
 
+.block-list__bullet{
+    left: 5.7rem;
+}
+
+.block-list__number {
+    right: -5rem;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*עיצוב קרוסלה*/
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+
+/*שינוי מימין לשמאל*/
+.block-gallery {
+    direction: rtl;
+    text-align: right;
+}
+
+
+.block-gallery--carousel .block-gallery__dots-list, .block-gallery--full-carousel .block-gallery__dots-list {
+    display: none;
+}
